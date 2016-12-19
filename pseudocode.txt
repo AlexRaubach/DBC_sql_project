@@ -1,0 +1,14 @@
+
+
+
+storage program
+
+Takes input from the user and stores it in an SQL database
+input like when the task is due, a name and a message and how often to reset .
+
+reminder program
+
+when run it queries the database for any reminders that are due today or overdue 
+then it sends an email to me with the name and date of the task in the subject line
+and the message in the body of the email. Limit the max number of rows returned from sql to avoid accidental spamming.
+
