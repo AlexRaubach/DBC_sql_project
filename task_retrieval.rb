@@ -1,5 +1,5 @@
 
-require_relative "gmail.rb" #this contains my gmail user name and password, so I'm not uploading it to uploaded to github. 
+require_relative "gmail.rb" #this contains my gmail user name and password, so I'm not uploading it to github. 
 
 # Here's the contents of that file minus my gmail credentials: 
 
@@ -17,4 +17,16 @@ require_relative "gmail.rb" #this contains my gmail user name and password, so I
 	# end
 
 
+db = SQLite3::Database.new("tasks.db")
 
+date_of_today = Time.now
+
+
+current_tasks = db.execute( <<-SQL 
+SELECT * FROM tasks ORDER By do_on ASC LIMIT 3
+
+SQL
+
+)
+
+p current_tasks
