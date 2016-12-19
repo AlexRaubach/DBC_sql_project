@@ -45,6 +45,7 @@ while i < loop_variable
 	user_provided_details = gets.chomp
 
 	puts "When do you want to be reminded about #{user_provided_task}?"
+	puts "Please format as year-month-day"
 	user_provided_date = gets.chomp
 
 
