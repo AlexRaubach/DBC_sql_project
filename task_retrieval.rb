@@ -38,10 +38,18 @@ while i < 3
 	do_on = current_tasks[i][4]
 
 	if do_on <= date_of_today
-		
+
+		Mail.deliver do
+			from 'alex@alexraubach.com'
+			to    "#{email}"
+			subject "Don't forget about #{task}"
+			body   "Hey #{user_name} 
+			Here's your automatic reminder! 
+			#{task_details}"
+		end
 
 
-
+		#need to delete that row once I've emailed the reminder
 	else
 		break 
 	end
