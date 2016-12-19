@@ -8,6 +8,7 @@ db = SQLite3::Database.new("tasks.db")
 
 create_table = <<-SQL
 	create table IF NOT EXISTS tasks(
+		id INTEGER PRIMARY KEY,
 		user_name varchar(255),
 		email varchar(255),
 		task varchar(255),
